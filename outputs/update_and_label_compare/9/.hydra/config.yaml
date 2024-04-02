@@ -1,0 +1,32 @@
+Paths:
+  log: log.pkl
+  data: data.pkl
+  model: model.pkl
+  output: output.pkl
+  plot: plot.html
+Network:
+  n_hid: 100
+  regime: rich
+  input_dim: ${Data.X_dim}
+  output_dim: ${Data.y_dim}
+Analyzer:
+  num_epoch: 1000000.0
+  num_sample: 10000.0
+  num_sample_hess: 100
+  stop_after: 10
+  converge_sample: false
+Trainer:
+  seed_fixed: true
+  stop_loss: false
+  lr: 0.1
+  batch_size: 10
+  Algorithm: SGD
+  input_noise: 0
+  label_noise: 0
+  update_noise: 0.03
+Data:
+  type: random
+  n_samples: 10
+  X_dim: 20
+  y_dim: 10
+  smooth_factor: 5
